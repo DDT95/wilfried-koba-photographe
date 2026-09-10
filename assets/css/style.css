@@ -13,7 +13,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body {
   margin: 0;
   background: var(--bg);
@@ -371,4 +371,27 @@ a.contact-card:hover { background: var(--bg-alt); }
   .issues { flex-direction: column; }
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
+}
+
+/* Floating contact CTA — always reachable, no need to scroll to the footer */
+.float-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 400;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  padding: 14px 22px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.float-contact:hover { background: #8f3616; transform: translateY(-2px); }
+
+@media (max-width: 720px) {
+  .float-contact { right: 16px; bottom: 16px; padding: 13px 18px; font-size: 0.78rem; }
 }
