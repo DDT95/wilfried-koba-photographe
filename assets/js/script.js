@@ -3,7 +3,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ---- Portfolio manifests (édités à la main selon les fichiers présents dans assets/images/) ----
 const PORTFOLIO = {
   'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
-  'gal-corporate': { count: 23, prefix: 'assets/images/corporate/corp-',  pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
+  'gal-corporate': { count: 43, featuredFrom: 24, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
   'gal-evenement': { count: 27, featuredFrom: 21, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel et fête de famille' },
   'gal-graphisme': { files: ['assets/images/graphisme/affiche-fete-musique.jpg'], alt: 'Affiche Fête de la musique réalisée par Wilfried Koba' },
 };
@@ -30,7 +30,8 @@ function buildGalleries() {
       });
       return;
     }
-    const sequence = Array.from({ length: cfg.count }, (_, index) => index + 1);
+    const sequence = Array.from({ length: cfg.count }, (_, index) => index + 1)
+      .filter(i => !cfg.exclude?.includes(i));
     if (cfg.featuredFrom) {
       sequence.sort((a, b) => {
         const aFeatured = a >= cfg.featuredFrom;
