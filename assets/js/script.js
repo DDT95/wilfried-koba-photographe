@@ -7,7 +7,7 @@ const PORTFOLIO = {
     sequence: [61, 3, 49, 16, 52, 24, 45, 14, 31, 47, 5, 57, 38, 22, 44, 35, 8, 50, 9, 34, 4, 58, 26, 40, 17, 59, 11, 48, 37, 7, 60, 18, 42, 54, 13, 51, 46, 21, 41, 55, 12, 43, 33, 23, 15, 19, 25, 27, 29, 32, 10, 6],
     prefix: 'assets/images/photo-', pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple'
   },
-  'gal-famille':   { count: 18, prefix: 'assets/images/famille/family-', pad: 2, ext: 'jpg', alt: 'Portrait, baptême et reportage de famille' },
+  'gal-famille':   { count: 23, prefix: 'assets/images/famille/family-', pad: 2, ext: 'jpg', alt: 'Portrait, baptême et reportage de famille' },
   'gal-corporate': { count: 82, featuredFrom: 44, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et mission de terrain' },
   'gal-evenement': {
     count: 101,
