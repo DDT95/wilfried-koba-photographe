@@ -2,9 +2,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ---- Portfolio manifests (édités à la main selon les fichiers présents dans assets/images/) ----
 const PORTFOLIO = {
-  'gal-mariage':   { count: 26, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage' },
+  'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
   'gal-corporate': { count: 23, prefix: 'assets/images/corporate/corp-',  pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
-  'gal-evenement': { count: 20, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel' },
+  'gal-evenement': { count: 27, featuredFrom: 21, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel et fête de famille' },
+  'gal-graphisme': { files: ['assets/images/graphisme/affiche-fete-musique.jpg'], alt: 'Affiche Fête de la musique réalisée par Wilfried Koba' },
 };
 
 function pad(n, width) {
@@ -15,7 +16,29 @@ function buildGalleries() {
   Object.entries(PORTFOLIO).forEach(([id, cfg]) => {
     const el = document.getElementById(id);
     if (!el || cfg.count === 0) return;
-    for (let i = 1; i <= cfg.count; i++) {
+    if (cfg.files) {
+      cfg.files.forEach(src => {
+        const btn = document.createElement('button');
+        btn.className = 'gallery-item';
+        btn.dataset.full = src;
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = cfg.alt;
+        img.loading = 'lazy';
+        btn.appendChild(img);
+        el.appendChild(btn);
+      });
+      return;
+    }
+    const sequence = Array.from({ length: cfg.count }, (_, index) => index + 1);
+    if (cfg.featuredFrom) {
+      sequence.sort((a, b) => {
+        const aFeatured = a >= cfg.featuredFrom;
+        const bFeatured = b >= cfg.featuredFrom;
+        return aFeatured === bFeatured ? a - b : aFeatured ? -1 : 1;
+      });
+    }
+    sequence.forEach(i => {
       const src = `${cfg.prefix}${pad(i, cfg.pad)}.${cfg.ext}`;
       const btn = document.createElement('button');
       btn.className = 'gallery-item';
@@ -26,7 +49,7 @@ function buildGalleries() {
       img.loading = 'lazy';
       btn.appendChild(img);
       el.appendChild(btn);
-    }
+    });
   });
 }
 buildGalleries();
@@ -48,32 +71,66 @@ burger.addEventListener('click', () => {
   const open = mainNav.classList.toggle('open');
   burger.classList.toggle('open', open);
   burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  document.body.classList.toggle('menu-open', open);
 });
 mainNav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('open');
     burger.classList.remove('open');
     burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Ouvrir le menu');
+    document.body.classList.remove('menu-open');
   });
 });
 
 // ---- Portfolio tabs ----
 const portTabs = document.querySelector('.port-tabs');
 if (portTabs) {
-  const tabs = portTabs.querySelectorAll('.ptab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
+  const tabs = Array.from(portTabs.querySelectorAll('.ptab'));
 
-      document.querySelectorAll('[data-portfolio-group]').forEach(g => {
-        const match = g.id === tab.dataset.target;
-        g.hidden = !match;
-        g.classList.toggle('active', match);
-      });
+  function activateTab(tab) {
+    tabs.forEach(t => {
+      const selected = t === tab;
+      t.classList.toggle('active', selected);
+      t.setAttribute('aria-selected', String(selected));
+      t.tabIndex = selected ? 0 : -1;
+    });
 
-      refreshLightboxTargets();
+    document.querySelectorAll('[data-portfolio-group]').forEach(g => {
+      const match = g.id === tab.dataset.target;
+      g.hidden = !match;
+      g.classList.toggle('active', match);
+    });
+
+    document.querySelectorAll('[data-portfolio-copy]').forEach(copy => {
+      copy.hidden = copy.dataset.portfolioCopy !== tab.dataset.target;
+    });
+
+    refreshLightboxTargets();
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateTab(tab));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      tabs[nextIndex].focus();
+      activateTab(tabs[nextIndex]);
+    });
+  });
+
+  document.querySelectorAll('[data-open-tab]').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = document.getElementById(button.dataset.openTab);
+      if (!targetTab) return;
+      activateTab(targetTab);
+      targetTab.focus();
     });
   });
 }
@@ -94,6 +151,7 @@ function openLightboxFrom(item) {
   currentIndex = activeItems.indexOf(item);
   showCurrent();
   lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 function showCurrent() {
@@ -104,6 +162,7 @@ function showCurrent() {
 }
 function closeLightbox() {
   lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 function showRelative(delta) {

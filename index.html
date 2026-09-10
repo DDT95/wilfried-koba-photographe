@@ -1,186 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilfried Koba — Artisan photographe, Val-d'Oise</title>
-<meta name="description" content="Wilfried Koba, artisan photographe en Val-d'Oise. Mariages, portraits, reportages institutionnels, événementiel, graphisme. Devis gratuit sous 24h.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3eddf">
+  <title>Wilfried Koba — Photographe &amp; graphiste en Val-d'Oise</title>
+  <meta name="description" content="Photographe et graphiste en Val-d'Oise depuis 2010. Mariages, portraits, reportages institutionnels et événements en Île-de-France.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,300..900&family=Newsreader:opsz,wght@6..72,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="Wilfried Koba, accueil"><span>Wilfried Koba</span><small>Photographe &amp; graphiste · création sans IA</small></a>
+      <nav id="mainNav" aria-label="Navigation principale">
+        <a href="#portfolio">Portfolio</a><a href="#services">Prestations</a><a href="#apropos">À propos</a><a href="tarifs.html">Tarifs</a><a href="#contact" class="nav-cta">Parler de votre projet</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="mainNav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
 
-<header id="siteHeader">
-  <div class="hd-inner">
-    <a href="#" class="logo">Wilfried Koba</a>
-    <nav id="mainNav">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Prestations</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact" class="nav-cta">Me contacter</a>
-    </nav>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-text">
-    <p class="eyebrow">Artisan photographe &amp; graphiste — depuis 2010</p>
-    <h1>Wilfried<br>Koba</h1>
-    <p class="hero-sub">Val-d'Oise · Île-de-France<br>Mariages · Portraits · Reportages · Événements</p>
-    <div class="hero-btns">
-      <a href="#portfolio" class="btn-dark">Voir le portfolio</a>
-      <a href="#contact" class="btn-ghost">Demander un devis</a>
-    </div>
-  </div>
-  <div class="hero-photo">
-    <img src="assets/images/hero-couverture.jpg" alt="Wilfried Koba photographe — reportage de mariage" loading="eager">
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="portfolio-section">
-  <div class="port-header">
-    <h2>Portfolio</h2>
-    <div class="port-tabs" role="tablist">
-      <button class="ptab active" data-target="gal-mariage" role="tab" aria-selected="true">Mariage</button>
-      <button class="ptab" data-target="gal-corporate" role="tab" aria-selected="false">Corporate</button>
-      <button class="ptab" data-target="gal-evenement" role="tab" aria-selected="false">Événementiel</button>
-    </div>
-  </div>
-  <div class="gallery active" id="gal-mariage" data-portfolio-group role="tabpanel"></div>
-  <div class="gallery" id="gal-corporate" data-portfolio-group role="tabpanel" hidden></div>
-  <div class="gallery" id="gal-evenement" data-portfolio-group role="tabpanel" hidden></div>
-</section>
-
-<!-- PRESTATIONS -->
-<section id="services" class="services-section">
-  <div class="svc-grid">
-    <div class="svc-card">
-      <span class="svc-num">01</span>
-      <h3>Particuliers</h3>
-      <p>Mariage, portrait, anniversaire, baptême, séance famille. Des images qui restent.</p>
-      <a href="tarifs.html#particuliers">Voir les formules →</a>
-    </div>
-    <div class="svc-card">
-      <span class="svc-num">02</span>
-      <h3>Institutions &amp; entreprises</h3>
-      <p>Reportages officiels, portraits institutionnels, événements, communication publique.</p>
-      <a href="tarifs.html#corporate">Voir les formules →</a>
-    </div>
-    <div class="svc-card">
-      <span class="svc-num">03</span>
-      <h3>Graphisme</h3>
-      <p>Magazines, affiches, campagnes électorales, identité visuelle, rapports institutionnels.</p>
-      <a href="tarifs.html#graphisme">Voir les formules →</a>
-    </div>
-  </div>
-  <div class="svc-clients">
-    <p>Ils m'ont fait confiance : <strong>Mairies de Magny-en-Vexin &amp; Villiers-le-Bel</strong>, Cabinet du Préfet du Val-d'Oise, services de l'État — et côté scène, plus de 200 concerts couverts pour des artistes comme <strong>La Fouine, Alain Chamfort, Nina Thuram, Dany Boon</strong>.</p>
-  </div>
-</section>
-
-<!-- LENS CAP -->
-<section id="magazine" class="magazine-section">
-  <div class="mag-inner">
-    <div class="mag-text">
-      <p class="eyebrow">Auto-édition</p>
-      <h2>Lens Cap</h2>
-      <p>Mon magazine photo auto-édité. Chaque numéro, un voyage : New York, l'Écosse… Pour commander un numéro ou un tirage d'art, contactez-moi.</p>
-      <a href="#contact" class="btn-ghost-ink">Commander →</a>
-    </div>
-    <div class="mag-issues">
-      <div class="mag-issue"><strong>N°1</strong> New York City</div>
-      <div class="mag-issue"><strong>N°2</strong> L'Écosse</div>
-    </div>
-  </div>
-</section>
-
-<!-- À PROPOS -->
-<section id="apropos" class="about-section">
-  <div class="about-inner">
-    <div class="about-photo">
-      <img src="assets/images/photo-wilfried.jpg" alt="Wilfried Koba, photographe professionnel" loading="lazy">
-    </div>
-    <div class="about-text">
-      <p class="eyebrow">Qui suis-je</p>
-      <h2>Wilfried Koba</h2>
-      <p>Photographe et graphiste professionnel depuis plus de 15 ans. J'accompagne les particuliers pour leurs moments importants, les collectivités et institutions pour leur communication, et les artistes pour leur image.</p>
-      <p>Ma particularité : j'ai autant travaillé dans les salles de concert que dans les couloirs des préfectures. Cette double culture — l'institutionnel et le vivant — nourrit mon regard.</p>
-      <a href="#contact" class="btn-ghost-ink">Discutons de votre projet →</a>
-    </div>
-  </div>
-</section>
-
-<!-- AVIS -->
-<section id="avis" class="avis-section">
-  <p class="eyebrow center">Ce qu'ils en disent</p>
-  <div class="avis-grid">
-    <blockquote>
-      <p>« Un grand merci pour les photos, qui sont vraiment à l'image de ce que j'avais imaginé : elles sont magnifiques ! Vous avez su saisir chaque instant et le résultat est parfait. »</p>
-      <cite>Angélique — Mariage</cite>
-    </blockquote>
-    <blockquote>
-      <p>« Plus qu'une journée de shooting, c'est un vrai moment de vie. Il a su nous mettre à l'aise et le résultat dépasse nos espérances. Wilfried est un photographe pépite, vous pouvez aller le voir les yeux fermés ! »</p>
-      <cite>Emma &amp; Rémi — Séance famille</cite>
-    </blockquote>
-    <blockquote>
-      <p>« Wil, je suis plus que ravi de t'avoir confié cette tâche : c'est exactement ce que je souhaitais, des instants de vie qui vont rester gravés dans nos cœurs. »</p>
-      <cite>Client — Mariage</cite>
-    </blockquote>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="contact-inner">
-    <div class="contact-text">
-      <p class="eyebrow light">Contact</p>
-      <h2>Votre projet mérite d'être bien raconté</h2>
-      <p>Décrivez-moi votre projet — mariage, portrait, reportage, graphisme — je vous réponds sous 24h avec une proposition.</p>
-    </div>
-    <div class="contact-links">
-      <a href="mailto:koba.wilfried@gmail.com" class="clink">
-        <span class="clink-label">Email</span>
-        <span class="clink-val">koba.wilfried@gmail.com</span>
-      </a>
-      <a href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener" class="clink">
-        <span class="clink-label">Instagram</span>
-        <span class="clink-val">@wilfried_koba</span>
-      </a>
-      <div class="clink">
-        <span class="clink-label">Zone</span>
-        <span class="clink-val">Île-de-France &amp; déplacements</span>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Artisan photographe &amp; graphiste — depuis 2010</p>
+        <h1 id="hero-title">Des images<br>qui racontent.</h1>
+        <p class="hero-role">Photographe &amp; graphiste</p>
+        <p class="hero-place">Val-d'Oise · Île-de-France</p>
+        <p class="hero-intro">Mariages · Portraits · Reportages · Événements</p>
+        <p class="ai-note">Visuels créés sans IA</p>
+        <div class="hero-actions"><a href="#portfolio" class="button button-solid">Découvrir mon travail</a><a href="#contact" class="text-link">Demander un devis <span aria-hidden="true">↗</span></a></div>
       </div>
-      <a href="tarifs.html" class="clink">
-        <span class="clink-label">Tarifs</span>
-        <span class="clink-val">Voir toutes les formules →</span>
-      </a>
-    </div>
-  </div>
-</section>
+      <figure class="hero-media"><img src="assets/images/hero-couverture.jpg" alt="Une mariée face à la tour Eiffel, photographiée par Wilfried Koba" fetchpriority="high"></figure>
+    </section>
 
-<footer>
-  <div class="ft-inner">
-    <span class="logo">Wilfried Koba</span>
-    <p>Photographe &amp; graphiste — Val-d'Oise &amp; Île-de-France</p>
-    <p class="ft-copy">© <span id="year"></span> Wilfried Koba — Tous droits réservés</p>
-  </div>
-</footer>
+    <aside class="proof-bar" aria-label="Références">
+      <p><strong>15+</strong> années d'expérience</p><p><strong>200+</strong> concerts couverts</p><p>Mairies de <strong>Magny-en-Vexin</strong> et <strong>Villiers-le-Bel</strong></p><p>Cabinet du <strong>Préfet du Val-d'Oise</strong></p>
+    </aside>
 
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">&times;</button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Précédente">&#8249;</button>
-  <img src="" alt="" id="lightboxImg">
-  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Suivante">&#8250;</button>
-</div>
+    <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-heading"><div><p class="kicker">Travaux choisis</p><h2 id="portfolio-title">Portfolio</h2></div><p>Des instants vécus, des gestes, des regards. Cliquez sur une image pour l'agrandir.</p></div>
+      <div class="port-tabs" role="tablist" aria-label="Catégories du portfolio">
+        <button class="ptab active" id="tab-mariage" data-target="gal-mariage" role="tab" aria-controls="gal-mariage" aria-selected="true" tabindex="0">Mariages <span>30</span></button>
+        <button class="ptab" id="tab-corporate" data-target="gal-corporate" role="tab" aria-controls="gal-corporate" aria-selected="false" tabindex="-1">Institutions <span>23</span></button>
+        <button class="ptab" id="tab-evenement" data-target="gal-evenement" role="tab" aria-controls="gal-evenement" aria-selected="false" tabindex="-1">Événements <span>27</span></button>
+        <button class="ptab" id="tab-graphisme" data-target="gal-graphisme" role="tab" aria-controls="gal-graphisme" aria-selected="false" tabindex="-1">Graphisme · sans IA <span>1</span></button>
+      </div>
+      <button class="graphic-glimpse" type="button" data-open-tab="tab-graphisme">
+        <img src="assets/images/graphisme/affiche-fete-musique.jpg" alt="Affiche Fête de la musique réalisée par Wilfried Koba" loading="lazy">
+        <span><strong>Graphisme</strong><small>Visuels créés sans IA</small></span>
+      </button>
+      <div class="portfolio-offer" data-portfolio-copy="gal-corporate" hidden>
+        <p class="kicker">Ce que je propose</p>
+        <ul>
+          <li>Reportage photo événementiel <span>Inaugurations, séminaires, conférences…</span></li>
+          <li>Portraits institutionnels &amp; corporate</li>
+          <li>Livraison rapide des images <span>Optimisées pour le web et l'impression</span></li>
+          <li>Respect de vos délais et contraintes de communication</li>
+        </ul>
+      </div>
+      <div class="gallery active" id="gal-mariage" data-portfolio-group role="tabpanel" aria-labelledby="tab-mariage"></div>
+      <div class="gallery" id="gal-corporate" data-portfolio-group role="tabpanel" aria-labelledby="tab-corporate" hidden></div>
+      <div class="gallery" id="gal-evenement" data-portfolio-group role="tabpanel" aria-labelledby="tab-evenement" hidden></div>
+      <div class="gallery gallery-graphic" id="gal-graphisme" data-portfolio-group role="tabpanel" aria-labelledby="tab-graphisme" hidden></div>
+    </section>
 
-<script src="assets/js/script.js"></script>
+    <section class="services-section" id="services" aria-labelledby="services-title">
+      <div class="section-heading section-heading-light"><div><p class="kicker">Ce que je fais</p><h2 id="services-title">Prestations</h2></div><p>Particuliers, collectivités, entreprises et artistes.</p></div>
+      <div class="service-list">
+        <article class="service-row"><span class="service-index">01</span><h3>Particuliers</h3><p>Mariage, famille, portrait, baptême et anniversaire. Une présence discrète pour des images naturelles.</p><a href="tarifs.html#particuliers">Voir les formules <span aria-hidden="true">→</span></a></article>
+        <article class="service-row"><span class="service-index">02</span><h3>Institutions &amp; entreprises</h3><p>Portraits, reportages officiels, événements et communication publique, avec des délais tenus.</p><a href="tarifs.html#corporate">Voir les prestations <span aria-hidden="true">→</span></a></article>
+        <article class="service-row"><span class="service-index">03</span><h3>Graphisme &amp; édition</h3><p>Magazines, rapports, campagnes et identités visuelles. Tous mes visuels sont créés sans IA.</p><a href="tarifs.html#graphisme">Voir les prestations <span aria-hidden="true">→</span></a></article>
+      </div>
+    </section>
+
+    <section class="about-section" id="apropos" aria-labelledby="about-title">
+      <figure class="about-photo"><img src="assets/images/wilfried-en-action.jpg" alt="Wilfried Koba au travail pendant un concert" loading="lazy"></figure>
+      <div class="about-copy"><p class="kicker">Derrière l'objectif</p><h2 id="about-title">À propos</h2><p class="about-lead">Je suis Wilfried Koba, photographe et graphiste professionnel depuis plus de quinze ans.</p><p>J'ai travaillé dans les salles de concert comme dans les couloirs des préfectures. Cette double culture — l'institutionnel et le vivant — m'a appris à observer vite, à rester discret et à livrer des images qui servent vraiment leur sujet.</p><dl class="about-facts"><div><dt>Basé à</dt><dd>Magny-en-Vexin</dd></div><div><dt>Zone</dt><dd>Île-de-France &amp; déplacements</dd></div><div><dt>Depuis</dt><dd>2010</dd></div></dl></div>
+    </section>
+
+    <section class="lenscap-section" aria-labelledby="lenscap-title">
+      <div class="lenscap-intro"><div><p class="kicker">Projet personnel · Auto-édition</p><h2 id="lenscap-title">Lens Cap</h2></div><div><p>Un magazine photo indépendant consacré au voyage, à la ville et au regard documentaire.</p></div></div>
+      <div class="lenscap-issues">
+        <article class="lenscap-issue"><figure><img src="assets/images/lens-cap-new-york.webp" alt="Lens Cap New York City, couverture et double page du magazine" loading="lazy"></figure><div><span>N° 01 · New York City</span><p>Instantanés urbains et histoires éternelles.</p></div></article>
+        <article class="lenscap-issue"><figure><img src="assets/images/lens-cap-ecosse.webp" alt="Double page de Lens Cap consacrée à l'Écosse" loading="lazy"></figure><div><span>N° 02 · Écosse</span><p>D'Édimbourg à l'île de Skye.</p></div></article>
+      </div>
+    </section>
+
+    <section class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="section-heading"><div><p class="kicker">Vos mots</p><h2 id="testimonials-title">Avis</h2></div></div>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-featured"><p>« Plus qu'une journée de shooting, c'est un vrai moment de vie que nous avons partagé avec Wilfried. Il a su nous mettre à l'aise et le résultat dépasse nos espérances. »</p><cite>Emma, Rémi, Hortense &amp; Hector</cite></blockquote>
+        <blockquote><p>« Les photos sont vraiment à l'image de ce que j'avais imaginé, elles sont magnifiques. Vous avez su saisir chaque instant et le résultat est parfait. »</p><cite>Angélique</cite></blockquote>
+        <blockquote><p>« Les photos sont superbes. Merci beaucoup de nous avoir permis de garder un souvenir de ce moment unique pour notre famille. »</p><cite>Une famille <span>Juin 2024</span></cite></blockquote>
+        <blockquote><p>« C'est magnifique ! Les filles sont trop contentes et nous aussi. Beau travail, vraiment, j'adore. »</p><cite>Une famille <span>Juin 2024</span></cite></blockquote>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><p class="kicker">Un projet en tête ?</p><div class="contact-main"><h2 id="contact-title">Contact</h2><div class="contact-copy"><p>Mariage, portrait, reportage, événement ou graphisme : décrivez-moi votre besoin.</p><a class="contact-email" href="mailto:koba.wilfried@gmail.com">koba.wilfried@gmail.com <span aria-hidden="true">↗</span></a></div></div><div class="contact-meta"><a href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener">Instagram · @wilfried_koba</a><a href="tarifs.html">Consulter les tarifs</a><span>Val-d'Oise · Île-de-France</span></div></section>
+  </main>
+
+  <footer><div class="footer-inner"><div><strong>Wilfried Koba</strong><span>Photographe &amp; graphiste · visuels créés sans IA</span></div><p>© <span id="year"></span> Wilfried Koba<br>SIREN 979 082 930</p><a href="#top">Retour en haut ↑</a></div></footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photographie agrandie" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Fermer">Fermer ×</button><button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Photo précédente">←</button><img src="" alt="" id="lightboxImg"><button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Photo suivante">→</button></div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
