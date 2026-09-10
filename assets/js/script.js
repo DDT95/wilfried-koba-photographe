@@ -5,7 +5,11 @@ const PORTFOLIO = {
   'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
   'gal-famille':   { count: 18, prefix: 'assets/images/famille/family-', pad: 2, ext: 'jpg', alt: 'Portrait, baptême et reportage de famille' },
   'gal-corporate': { count: 82, featuredFrom: 44, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et mission de terrain' },
-  'gal-evenement': { count: 43, featuredFrom: 28, exclude: [20, 21, 22, 23, 24, 25, 26, 27], prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Scène, spectacle et reportage événementiel' },
+  'gal-evenement': {
+    count: 101,
+    sequence: [52, 8, 45, 31, 51, 3, 60, 12, 76, 93, 10, 64, 29, 47, 4, 90, 36, 55, 1, 75, 56, 65, 7, 73, 80, 15, 63, 84, 6, 88, 83, 11, 85, 89, 39, 59, 81, 18, 68, 71, 38, 44, 49, 35, 62, 99, 42, 72, 79, 2, 57, 97, 41, 54, 50, 32, 100, 48, 30, 67, 91, 37, 101, 86, 28, 66, 69, 13, 82, 98, 34, 94, 78, 40, 70, 74, 5, 92, 77, 16, 87, 96, 43, 58, 46, 19, 61, 53, 14, 95, 9, 17, 33],
+    prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Scène, spectacle et reportage événementiel'
+  },
   'gal-graphisme': {
     files: [
       'assets/images/graphisme/affiche-fete-musique.jpg',
@@ -49,9 +53,9 @@ function buildGalleries() {
       });
       return;
     }
-    const sequence = Array.from({ length: cfg.count }, (_, index) => index + 1)
+    const sequence = cfg.sequence ? [...cfg.sequence] : Array.from({ length: cfg.count }, (_, index) => index + 1)
       .filter(i => !cfg.exclude?.includes(i));
-    if (cfg.featuredFrom) {
+    if (!cfg.sequence && cfg.featuredFrom) {
       sequence.sort((a, b) => {
         const aFeatured = a >= cfg.featuredFrom;
         const bFeatured = b >= cfg.featuredFrom;
