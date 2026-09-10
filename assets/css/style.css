@@ -57,7 +57,7 @@ nav .nav-cta:hover{background:var(--ink);border-color:var(--ink)}
 .section-heading{margin-bottom:2.8rem;border-top:3px double var(--ink);padding-top:1rem}
 .section-heading h2,.about-copy h2,.contact-section h2,.lenscap-section h2{font-family:var(--serif);font-size:clamp(3.2rem,7vw,7rem);font-weight:650;line-height:.86;letter-spacing:-.05em;text-transform:none}
 .section-heading>p{font-size:.78rem}
-.port-tabs{display:grid;grid-template-columns:repeat(4,1fr);margin-bottom:1rem;border:1px solid var(--ink);border-right:0}
+.port-tabs{display:grid;grid-template-columns:repeat(5,1fr);margin-bottom:1rem;border:1px solid var(--ink);border-right:0}
 .ptab{width:100%;min-width:0;margin:0;padding:1rem;border:0;border-right:1px solid var(--ink);background:transparent;color:var(--ink);font-family:var(--serif);font-size:1rem;font-weight:700}
 .ptab.active{background:var(--signal);border-bottom:0;color:#fff}
 .ptab:hover{background:var(--ink);color:#fff}
@@ -72,6 +72,8 @@ nav .nav-cta:hover{background:var(--ink);border-color:var(--ink)}
 .graphic-glimpse small{color:var(--signal);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .graphic-glimpse:hover{border-color:var(--signal);color:var(--signal)}
 .portfolio-ai-note{width:max-content;max-width:100%;margin:0 0 1.4rem auto;color:var(--muted);font-size:.65rem;font-style:italic}
+.portfolio-offer-lead .kicker{margin-bottom:.75rem}
+.portfolio-offer-lead>p:last-child{max-width:360px;color:var(--muted);font-size:.78rem;line-height:1.55}
 .portfolio-offer li,.graphic-offer li,.institution-offer strong{font-family:var(--sans);font-weight:650}
 .services-section{background:#10110f}
 .section-heading-light{border-color:rgba(255,255,255,.7)}
@@ -109,8 +111,8 @@ blockquote p{font-family:var(--sans)}
   .hero h1{font-size:clamp(3.8rem,15vw,6.2rem)}
   .hero-media{min-height:420px}
   .proof-bar{grid-template-columns:1fr 1fr}
-  .port-tabs{grid-template-columns:1fr 1fr}
-  .ptab:nth-child(-n+2){border-bottom:1px solid var(--ink)}
+  .port-tabs{grid-template-columns:repeat(3,1fr)}
+  .ptab:nth-child(-n+3){border-bottom:1px solid var(--ink)}
   .service-row{grid-template-columns:40px 1fr}
   .service-row h3,.service-row p,.service-row a{grid-column:2}
 }
@@ -126,7 +128,10 @@ blockquote p{font-family:var(--sans)}
   .section-heading h2,.about-copy h2,.lenscap-section h2{font-size:clamp(3rem,15vw,5.4rem)}
   .contact-section h2{font-size:clamp(3.5rem,18vw,6rem)}
   .port-tabs{position:static;overflow:visible}
+  .port-tabs{grid-template-columns:1fr 1fr}
   .ptab{min-width:0}
+  .ptab:nth-child(-n+4){border-bottom:1px solid var(--ink)}
+  .ptab:last-child{grid-column:1 / -1}
   .graphic-glimpse{margin-left:0}
   .portfolio-ai-note{margin-left:0}
   .gallery{columns:2 140px}

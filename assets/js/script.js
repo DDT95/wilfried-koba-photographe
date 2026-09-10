@@ -3,8 +3,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // ---- Portfolio manifests (édités à la main selon les fichiers présents dans assets/images/) ----
 const PORTFOLIO = {
   'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
-  'gal-corporate': { count: 43, featuredFrom: 24, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
-  'gal-evenement': { count: 27, featuredFrom: 21, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel et fête de famille' },
+  'gal-famille':   { count: 18, prefix: 'assets/images/famille/family-', pad: 2, ext: 'jpg', alt: 'Portrait, baptême et reportage de famille' },
+  'gal-corporate': { count: 82, featuredFrom: 44, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et mission de terrain' },
+  'gal-evenement': { count: 43, featuredFrom: 28, exclude: [20, 21, 22, 23, 24, 25, 26, 27], prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Scène, spectacle et reportage événementiel' },
   'gal-graphisme': {
     files: [
       'assets/images/graphisme/affiche-fete-musique.jpg',
