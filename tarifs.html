@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs — Wilfried Koba, Artisan photographe Val-d'Oise</title>
+<meta name="description" content="Formules et tarifs de Wilfried Koba, artisan photographe en Val-d'Oise. Packs mariage, portraits famille, corporate, graphisme. Devis gratuit sous 24h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── Tarifs page specific ── */
+.tarifs-hero {
+  background: var(--ink);
+  color: var(--bg);
+  padding: clamp(3rem, 8vw, 6rem) var(--side) clamp(2rem, 6vw, 4rem);
+  text-align: center;
+}
+.tarifs-hero .eyebrow { color: var(--accent); }
+.tarifs-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; margin: .3em 0 .6em; color: var(--bg); }
+.tarifs-hero p { font-size: 1.05rem; opacity: .8; max-width: 520px; margin: 0 auto; }
+
+.tarifs-body { max-width: 1080px; margin: 0 auto; padding: 4rem var(--side) 6rem; }
+
+/* Section heading */
+.tarifs-section { margin-bottom: 5rem; }
+.tarifs-section-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--ink); padding-bottom: .8rem; }
+.tarifs-section-head h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; }
+.tarifs-section-head .section-tag { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; opacity: .4; }
+
+/* Pack cards */
+.packs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.pack {
+  border: 1px solid rgba(26,23,20,.12);
+  border-radius: 4px;
+  padding: 1.8rem 1.6rem;
+  display: flex; flex-direction: column; gap: .8rem;
+  position: relative;
+}
+.pack.featured {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+.pack-badge {
+  position: absolute; top: -12px; left: 1.6rem;
+  background: var(--accent); color: #fff;
+  font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: .25em .8em; border-radius: 2px;
+}
+.pack-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; }
+.pack-price { font-size: 1.6rem; font-weight: 500; line-height: 1.2; }
+.pack-price span { font-size: .85rem; font-weight: 400; opacity: .6; }
+.pack-desc { font-size: .9rem; line-height: 1.6; opacity: .7; }
+.pack.featured .pack-desc { opacity: .75; }
+.pack-includes { list-style: none; padding: 0; margin: 0; font-size: .88rem; display: flex; flex-direction: column; gap: .4rem; }
+.pack-includes li::before { content: "✓ "; color: var(--accent); font-weight: 500; }
+.pack.featured .pack-includes li::before { color: #d97c5a; }
+.pack-cta {
+  margin-top: auto;
+  display: inline-block; padding: .65em 1.2em;
+  border: 1px solid currentColor; border-radius: 3px;
+  font-size: .85rem; letter-spacing: .06em; text-transform: uppercase;
+  text-decoration: none; text-align: center;
+  transition: background .2s, color .2s;
+}
+.pack-cta:hover { background: var(--ink); color: var(--bg); }
+.pack.featured .pack-cta { border-color: var(--bg); color: var(--bg); }
+.pack.featured .pack-cta:hover { background: var(--bg); color: var(--ink); }
+
+.pack-note { margin-top: 1.2rem; font-size: .82rem; opacity: .5; font-style: italic; }
+
+/* Tableau simple */
+.price-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.price-table th, .price-table td { text-align: left; padding: .9rem .5rem; border-bottom: 1px solid rgba(26,23,20,.1); vertical-align: top; }
+.price-table th { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; opacity: .45; font-weight: 400; padding-bottom: .5rem; }
+.price-table td:last-child { text-align: right; font-weight: 500; white-space: nowrap; }
+.price-table tr:last-child td { border-bottom: none; }
+.price-tag-accent { color: var(--accent); }
+
+/* CTA bande */
+.tarifs-cta-band {
+  background: var(--ink); color: var(--bg);
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--side);
+}
+.tarifs-cta-band h2 { font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: .8rem; color: var(--bg); }
+.tarifs-cta-band p { opacity: .7; margin-bottom: 1.8rem; }
+.tarifs-cta-band a {
+  display: inline-block; padding: .85em 2em;
+  background: var(--bg); color: var(--ink);
+  text-decoration: none; font-size: .9rem;
+  letter-spacing: .06em; text-transform: uppercase;
+  border-radius: 3px; font-weight: 500;
+}
+
+/* Legal block */
+.legal-block {
+  border: 1px solid rgba(26,23,20,.12);
+  border-radius: 4px;
+  padding: 1.6rem;
+  font-size: .82rem;
+  line-height: 1.9;
+  opacity: .65;
+  margin-top: 4rem;
+}
+.legal-block strong { opacity: 1; }
+.legal-block a { color: var(--ink); }
+
+/* Pack sub-heading */
+.pack-subhead { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin: 3rem 0 1.2rem; }
+
+@media (max-width: 600px) {
+  .packs { grid-template-columns: 1fr; }
+  .price-table { font-size: .82rem; }
+  .price-table td:last-child { white-space: normal; }
+  .tarifs-section-head { flex-direction: column; gap: .3rem; }
+}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="hd-inner">
+    <a href="index.html" class="logo">Wilfried Koba</a>
+    <nav id="mainNav">
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#services">Prestations</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="index.html#contact" class="nav-cta">Me contacter</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO TARIFS -->
+<section class="tarifs-hero">
+  <p class="eyebrow">Formules &amp; Tarifs</p>
+  <h1>Des formules claires,<br>sans mauvaise surprise</h1>
+  <p>Tous les prix sont indiqués à titre indicatif. Chaque projet est unique — je vous réponds sous 24h avec une proposition adaptée.</p>
+</section>
+
+<div class="tarifs-body">
+
+  <!-- PARTICULIERS -->
+  <section class="tarifs-section" id="particuliers">
+    <div class="tarifs-section-head">
+      <h2>Particuliers</h2>
+      <span class="section-tag">Famille · Portraits · Événements</span>
+    </div>
+
+    <p style="margin-bottom:1.5rem; font-size:.95rem; opacity:.7;">Que ce soit pour un portrait, une séance famille ou un anniversaire, voici mes formules de base. On adapte ensemble en fonction de vos envies.</p>
+
+    <div class="packs">
+      <div class="pack">
+        <div class="pack-name">Essentiel</div>
+        <div class="pack-price">à partir de <strong>149&nbsp;€</strong></div>
+        <p class="pack-desc">L'entrée parfaite pour un souvenir authentique. Simple, direct, sans compromis sur la qualité.</p>
+        <ul class="pack-includes">
+          <li>1h de séance en extérieur</li>
+          <li>15 photos retouchées</li>
+          <li>Galerie privée en ligne</li>
+          <li>Téléchargement HD inclus</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Demander un devis</a>
+      </div>
+
+      <div class="pack featured">
+        <div class="pack-badge">Le plus demandé</div>
+        <div class="pack-name">Famille</div>
+        <div class="pack-price">à partir de <strong>249&nbsp;€</strong></div>
+        <p class="pack-desc">La formule pour immortaliser votre famille. Souple, sans stress, avec le temps qu'il faut pour que tout le monde soit à l'aise.</p>
+        <ul class="pack-includes">
+          <li>2h de séance (intérieur ou extérieur)</li>
+          <li>35 photos retouchées</li>
+          <li>Galerie privée en ligne</li>
+          <li>Téléchargement HD inclus</li>
+          <li>1 tirage 20×30 cm offert</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Demander un devis</a>
+      </div>
+
+      <div class="pack">
+        <div class="pack-name">Premium</div>
+        <div class="pack-price">à partir de <strong>390&nbsp;€</strong></div>
+        <p class="pack-desc">Plusieurs lieux, un shooting complet, une livraison soignée. Pour ceux qui veulent vraiment quelque chose de beau.</p>
+        <ul class="pack-includes">
+          <li>Demi-journée (4h)</li>
+          <li>60+ photos retouchées</li>
+          <li>Plusieurs décors / lieux</li>
+          <li>Galerie privée + téléchargement HD</li>
+          <li>3 tirages photo offerts</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Demander un devis</a>
+      </div>
+    </div>
+    <p class="pack-note">* Déplacement inclus dans un rayon de 30 km autour de Magny-en-Vexin. Au-delà, forfait kilométrique à définir ensemble.</p>
+
+    <!-- MARIAGE -->
+    <h3 class="pack-subhead">Mariage</h3>
+    <p style="margin-bottom:1.5rem; font-size:.95rem; opacity:.7;">Plus de 15 ans à couvrir des mariages — des petites cérémonies intimes aux grands événements. Mon approche : documentaire et chaleureux, sans poser artificiel.</p>
+
+    <div class="packs">
+      <div class="pack">
+        <div class="pack-name">Mariage Light</div>
+        <div class="pack-price">à partir de <strong>890&nbsp;€</strong></div>
+        <p class="pack-desc">Pour les petites cérémonies. L'essentiel capturé avec soin, sans en faire trop.</p>
+        <ul class="pack-includes">
+          <li>Jusqu'à 4h de couverture</li>
+          <li>Cérémonie + photos de couple</li>
+          <li>150+ photos retouchées</li>
+          <li>Galerie privée en ligne</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Demander un devis</a>
+      </div>
+
+      <div class="pack featured">
+        <div class="pack-badge">Recommandé</div>
+        <div class="pack-name">Mariage Complet</div>
+        <div class="pack-price">à partir de <strong>1 490&nbsp;€</strong></div>
+        <p class="pack-desc">De la préparation au vin d'honneur. Toute votre journée, rien de manqué, aucun regret.</p>
+        <ul class="pack-includes">
+          <li>Jusqu'à 8h de couverture</li>
+          <li>Préparatifs + cérémonie + cocktail</li>
+          <li>300+ photos retouchées</li>
+          <li>Séance couple incluse</li>
+          <li>Galerie privée + téléchargement HD</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Demander un devis</a>
+      </div>
+
+      <div class="pack">
+        <div class="pack-name">Mariage Prestige</div>
+        <div class="pack-price">sur devis</div>
+        <p class="pack-desc">Couverture intégrale, deux photographes, album luxe inclus. Pour les grandes cérémonies qui méritent tout.</p>
+        <ul class="pack-includes">
+          <li>Journée complète (10h+)</li>
+          <li>2 photographes</li>
+          <li>500+ photos retouchées</li>
+          <li>Album photo 30×30 cm inclus</li>
+          <li>Séance engagement optionnelle</li>
+        </ul>
+        <a href="index.html#contact" class="pack-cta">Nous contacter</a>
+      </div>
+    </div>
+    <p class="pack-note">* Tarifs hors déplacements au-delà de 50 km. Devis gratuit et personnalisé pour chaque mariage — pas deux mariages ne se ressemblent.</p>
+  </section>
+
+  <!-- CORPORATE -->
+  <section class="tarifs-section" id="corporate">
+    <div class="tarifs-section-head">
+      <h2>Institutions &amp; Entreprises</h2>
+      <span class="section-tag">Corporate · Institutionnel · Événementiel</span>
+    </div>
+    <p style="margin-bottom:1.8rem; font-size:.95rem; opacity:.7;">Reportages officiels, portraits de direction, événements d'entreprise, communication publique. Des images professionnelles qui valorisent votre image institutionnelle. Références&nbsp;: Mairies de Magny-en-Vexin &amp; Villiers-le-Bel, Cabinet du Préfet du Val-d'Oise, services de l'État.</p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Prestation</th>
+          <th>Détail</th>
+          <th>Tarif indicatif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Portrait corporate</strong></td>
+          <td>En studio ou sur site, retouche professionnelle, fond neutre</td>
+          <td class="price-tag-accent">à partir de 180&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Portraits direction (lot)</strong></td>
+          <td>5 personnes et + sur site, demi-journée</td>
+          <td class="price-tag-accent">à partir de 490&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Événement d'entreprise</strong></td>
+          <td>Conférence, séminaire, inauguration — 4h de couverture</td>
+          <td class="price-tag-accent">à partir de 650&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Journée événementielle</strong></td>
+          <td>Couverture complète jusqu'à 8h</td>
+          <td class="price-tag-accent">à partir de 1 100&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Reportage institutionnel</strong></td>
+          <td>Locaux, équipes, activités — demi-journée sur site</td>
+          <td class="price-tag-accent">à partir de 750&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Concert / spectacle</strong></td>
+          <td>Couverture live complète, livraison sous 48h</td>
+          <td class="price-tag-accent">à partir de 450&nbsp;€</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="pack-note">Devis personnalisé pour collectivités, administrations et marchés publics. Facturation possible avec numéro de TVA (FR47979082930) sur demande.</p>
+  </section>
+
+  <!-- GRAPHISME -->
+  <section class="tarifs-section" id="graphisme">
+    <div class="tarifs-section-head">
+      <h2>Graphisme</h2>
+      <span class="section-tag">Identité · Édition · Communication</span>
+    </div>
+    <p style="margin-bottom:1.8rem; font-size:.95rem; opacity:.7;">Magazines, affiches, campagnes électorales, rapports institutionnels, identité visuelle. Une approche éditoriale rigoureuse, au service de votre message.</p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Prestation</th>
+          <th>Détail</th>
+          <th>Tarif indicatif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Affiche / flyer</strong></td>
+          <td>Création complète, formats print + web, 2 révisions incluses</td>
+          <td class="price-tag-accent">à partir de 120&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Campagne électorale</strong></td>
+          <td>Profession de foi, affiche, réseaux sociaux — forfait complet</td>
+          <td class="price-tag-accent">sur devis</td>
+        </tr>
+        <tr>
+          <td><strong>Magazine / revue</strong></td>
+          <td>Maquette + mise en page (par tranche de 8 pages)</td>
+          <td class="price-tag-accent">à partir de 350&nbsp;€</td>
+        </tr>
+        <tr>
+          <td><strong>Rapport institutionnel</strong></td>
+          <td>Rapport annuel, bilan d'activité — gabarit + mise en page complète</td>
+          <td class="price-tag-accent">sur devis</td>
+        </tr>
+        <tr>
+          <td><strong>Identité visuelle</strong></td>
+          <td>Logo, charte graphique, déclinaisons print &amp; web</td>
+          <td class="price-tag-accent">à partir de 490&nbsp;€</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="pack-note">Fichiers sources (Illustrator, InDesign) remis en fin de projet. Délais et nombre de révisions définis en début de mission.</p>
+  </section>
+
+  <!-- LEGAL REASSURANCE -->
+  <div class="legal-block">
+    <strong>Wilfried Koba — Artisan photographe déclaré</strong><br>
+    SIREN&nbsp;: 979&nbsp;082&nbsp;930 &nbsp;·&nbsp; Code NAF&nbsp;: 74.20Z — Activités photographiques &nbsp;·&nbsp; N° TVA intracommunautaire&nbsp;: FR47979082930<br>
+    Siège social&nbsp;: 14 Rue Utrillo, 95420 Magny-en-Vexin (Val-d'Oise)<br>
+    Micro-entrepreneur — régime simplifié · Activité déclarée depuis le 30 septembre 2023 · Plus de 15 ans d'expérience<br><br>
+    Informations vérifiables sur <a href="https://www.pappers.fr/entreprise/koba-wilfried-979082930" target="_blank" rel="noopener">pappers.fr</a>.
+    Un devis et une facture sont fournis pour chaque mission. Vos photos ne sont jamais partagées ou utilisées sans votre accord explicite (conformité RGPD).
+  </div>
+
+</div><!-- /tarifs-body -->
+
+<!-- CTA BAND -->
+<section class="tarifs-cta-band">
+  <h2>Un projet en tête&nbsp;?</h2>
+  <p>Décrivez-moi votre projet — je vous réponds sous 24h avec une proposition adaptée et un devis clair.</p>
+  <a href="index.html#contact">Me contacter →</a>
+</section>
+
+<footer>
+  <div class="ft-inner">
+    <span class="logo">Wilfried Koba</span>
+    <p>Artisan photographe &amp; graphiste — Val-d'Oise &amp; Île-de-France</p>
+    <p class="ft-copy">© <span id="year"></span> Wilfried Koba — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const burger  = document.getElementById('burger');
+const mainNav = document.getElementById('mainNav');
+const header  = document.getElementById('siteHeader');
+burger.addEventListener('click', () => {
+  const open = mainNav.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
+});
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+</script>
+</body>
+</html>
