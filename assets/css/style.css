@@ -71,6 +71,7 @@ nav .nav-cta:hover{background:var(--ink);border-color:var(--ink)}
 .graphic-glimpse strong{font-family:var(--serif);font-size:1rem}
 .graphic-glimpse small{color:var(--signal);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .graphic-glimpse:hover{border-color:var(--signal);color:var(--signal)}
+.portfolio-ai-note{width:max-content;max-width:100%;margin:0 0 1.4rem auto;color:var(--muted);font-size:.65rem;font-style:italic}
 .portfolio-offer li,.graphic-offer li,.institution-offer strong{font-family:var(--sans);font-weight:650}
 .services-section{background:#10110f}
 .section-heading-light{border-color:rgba(255,255,255,.7)}
@@ -99,6 +100,7 @@ blockquote p{font-family:var(--sans)}
 .pack-name{font-weight:700!important}
 .pack-price{font-weight:650}
 .pack-includes li::before{color:var(--signal)}
+.graphic-ai-note{display:block;margin-top:.75rem;color:var(--muted);font-size:.68rem;font-style:italic}
 
 @media(max-width:860px){
   .brand small{display:none}
@@ -126,6 +128,7 @@ blockquote p{font-family:var(--sans)}
   .port-tabs{position:static;overflow:visible}
   .ptab{min-width:0}
   .graphic-glimpse{margin-left:0}
+  .portfolio-ai-note{margin-left:0}
   .gallery{columns:2 140px}
   .about-photo{max-width:100%}
   .testimonials-grid{grid-template-columns:1fr}
