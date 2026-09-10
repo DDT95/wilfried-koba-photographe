@@ -5,7 +5,25 @@ const PORTFOLIO = {
   'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
   'gal-corporate': { count: 43, featuredFrom: 24, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
   'gal-evenement': { count: 27, featuredFrom: 21, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel et fête de famille' },
-  'gal-graphisme': { files: ['assets/images/graphisme/affiche-fete-musique.jpg'], alt: 'Affiche Fête de la musique réalisée par Wilfried Koba' },
+  'gal-graphisme': {
+    files: [
+      'assets/images/graphisme/affiche-fete-musique.jpg',
+      'assets/images/graphisme/graphisme-02.jpg',
+      'assets/images/graphisme/graphisme-03.jpg',
+      'assets/images/graphisme/graphisme-04.jpg',
+      'assets/images/graphisme/graphisme-05.jpg',
+      'assets/images/graphisme/graphisme-06.jpg',
+      'assets/images/graphisme/graphisme-07.jpg',
+      'assets/images/graphisme/graphisme-08.jpg',
+      'assets/images/graphisme/graphisme-09.jpg',
+      'assets/images/graphisme/graphisme-10.jpg',
+      'assets/images/graphisme/graphisme-11.jpg',
+      'assets/images/graphisme/graphisme-12.jpg',
+      'assets/images/graphisme/graphisme-13.jpg',
+      'assets/images/graphisme/graphisme-14.jpg'
+    ],
+    alt: 'Création graphique réalisée par Wilfried Koba'
+  },
 };
 
 function pad(n, width) {

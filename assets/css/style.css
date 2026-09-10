@@ -63,8 +63,8 @@ nav .nav-cta:hover{background:var(--ink);border-color:var(--ink)}
 .ptab:hover{background:var(--ink);color:#fff}
 .gallery{columns:4 220px;column-gap:.65rem}
 .gallery-item{margin-bottom:.65rem;background:#ddd}
-.gallery-graphic{columns:1;max-width:420px}
-.gallery-graphic .gallery-item img{max-height:680px;object-fit:contain;background:#e7e7e2}
+.gallery-graphic{columns:3 240px;max-width:none}
+.gallery-graphic .gallery-item img{height:auto;max-height:none;object-fit:contain;background:#e7e7e2}
 .graphic-glimpse{display:grid;grid-template-columns:46px auto;align-items:center;gap:.75rem;width:max-content;margin:0 0 1.2rem auto;padding:.45rem .7rem .45rem .45rem;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-align:left}
 .graphic-glimpse img{width:46px;height:62px;object-fit:cover}
 .graphic-glimpse span{display:flex;flex-direction:column}
