@@ -38,7 +38,8 @@
   <section class="hero">
     <div class="hero-text">
       <p class="mono-label">Photographe &amp; graphiste — depuis 2010</p>
-      <h1>Votre histoire<br>en lumière.</h1>
+      <h1>Wilfried Koba</h1>
+      <p class="hero-tagline">Votre histoire en lumière.</p>
       <p class="hero-lead">Mariages, portraits, institutions, entreprises : je capture vos moments et vos projets pour en faire des images qui durent.</p>
       <div class="hero-actions">
         <a href="#particuliers" class="btn btn-primary">Voir mes prestations</a>
@@ -55,19 +56,26 @@
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Mariages</span><span>·</span><span>Portraits</span><span>·</span><span>Baptêmes</span><span>·</span><span>Institutionnel</span><span>·</span><span>Corporate</span><span>·</span><span>Événementiel</span><span>·</span><span>Graphisme</span><span>·</span><span>Lens Cap</span><span>·</span>
-      <span>Mariages</span><span>·</span><span>Portraits</span><span>·</span><span>Baptêmes</span><span>·</span><span>Institutionnel</span><span>·</span><span>Corporate</span><span>·</span><span>Événementiel</span><span>·</span><span>Graphisme</span><span>·</span><span>Lens Cap</span><span>·</span>
-    </div>
+  <!-- SERVICES STRIP -->
+  <div class="services-strip" aria-hidden="true">
+    <span>Mariage</span>
+    <span class="strip-dot">·</span>
+    <span>Portrait</span>
+    <span class="strip-dot">·</span>
+    <span>Institutionnel</span>
+    <span class="strip-dot">·</span>
+    <span>Événementiel</span>
+    <span class="strip-dot">·</span>
+    <span>Graphisme</span>
+    <span class="strip-dot">·</span>
+    <span>Lens Cap</span>
   </div>
 
   <!-- PARTICULIERS -->
   <section id="particuliers" class="block">
     <div class="container">
       <div class="block-head">
-        <span class="mono-label">01 — Particuliers</span>
+        <span class="mono-label">Particuliers</span>
         <h2>Des souvenirs qui traversent le temps</h2>
         <p class="block-lead">Mariage, anniversaire, baptême, shooting portrait ou famille : chaque moment important mérite d'être immortalisé avec soin. Je capture vos émotions pour en faire des souvenirs intemporels.</p>
       </div>
@@ -77,6 +85,10 @@
         <span>Retouche professionnelle</span>
         <span>Galerie privée en ligne</span>
         <span>Tirages &amp; album en option</span>
+      </div>
+
+      <div class="gallery-tabs" id="galleryPersonal">
+        <div class="gallery gallery-active" id="gal-mariage" data-portfolio-group></div>
       </div>
 
       <div class="rate-list">
@@ -107,10 +119,6 @@
         </div>
       </div>
       <p class="rate-note">Tarifs indicatifs — chaque projet est différent, contactez-moi pour un devis adapté à vos attentes et à votre budget. <a href="#contact">Réservez votre date →</a></p>
-
-      <div class="gallery-tabs" id="galleryPersonal">
-        <div class="gallery gallery-active" id="gal-mariage" data-portfolio-group></div>
-      </div>
     </div>
   </section>
 
@@ -118,7 +126,7 @@
   <section id="corporate" class="block block-alt">
     <div class="container">
       <div class="block-head">
-        <span class="mono-label">02 — Institutions &amp; entreprises</span>
+        <span class="mono-label">Institutions &amp; entreprises</span>
         <h2>Un regard professionnel pour vos événements</h2>
         <p class="block-lead">Vous êtes une commune, une institution, une entreprise ? Je valorise vos événements, vos équipes et vos projets à travers des images prêtes à l'emploi pour votre communication.</p>
       </div>
@@ -128,6 +136,15 @@
         <span>Portraits institutionnels</span>
         <span>Livraison rapide, web &amp; print</span>
         <span>Respect de vos délais</span>
+      </div>
+
+      <div class="gallery-tabs" id="galleryPro">
+        <div class="gallery-tab-nav">
+          <button class="tab-btn active" data-target="gal-corporate">Corporate &amp; institutionnel</button>
+          <button class="tab-btn" data-target="gal-evenement">Événementiel</button>
+        </div>
+        <div class="gallery gallery-active" id="gal-corporate" data-portfolio-group></div>
+        <div class="gallery" id="gal-evenement" data-portfolio-group hidden></div>
       </div>
 
       <div class="rate-list">
@@ -149,15 +166,6 @@
       </div>
       <p class="rate-note">Devis sur demande pour les collectivités et entreprises. <a href="#contact">Contactez-moi →</a></p>
 
-      <div class="gallery-tabs" id="galleryPro">
-        <div class="gallery-tab-nav">
-          <button class="tab-btn active" data-target="gal-corporate">Corporate &amp; institutionnel</button>
-          <button class="tab-btn" data-target="gal-evenement">Événementiel</button>
-        </div>
-        <div class="gallery gallery-active" id="gal-corporate" data-portfolio-group></div>
-        <div class="gallery" id="gal-evenement" data-portfolio-group hidden></div>
-      </div>
-
       <p class="client-note">Ils m'ont fait confiance : Mairies de Magny-en-Vexin et Villiers-le-Bel, Cabinet du Préfet du Val-d'Oise, services de l'État — et côté scène, plus de 200 concerts, événements et festivals couverts, pour des artistes comme La Fouine, Alain Chamfort, Nina Thuram ou Dany Boon.</p>
     </div>
   </section>
@@ -166,7 +174,7 @@
   <section id="graphisme" class="block">
     <div class="container">
       <div class="block-head">
-        <span class="mono-label">03 — Graphisme</span>
+        <span class="mono-label">Graphisme</span>
         <h2>Des visuels impactants au service de vos messages</h2>
         <p class="block-lead">Plus de 15 ans d'expérience en communication publique et institutionnelle : magazines municipaux, campagnes électorales, affiches, rapports d'activité. J'ai notamment conçu la communication et les affiches de la ville de Magny-en-Vexin en tant que chargé de communication, et réalisé le rapport d'activité de la Préfecture du Val-d'Oise.</p>
       </div>
@@ -208,7 +216,7 @@
   <section id="magazine" class="magazine">
     <div class="container magazine-inner">
       <div class="magazine-text">
-        <span class="mono-label">04 — Auto-édition</span>
+        <span class="mono-label">Auto-édition</span>
         <h2>Lens Cap</h2>
         <p>Mon magazine photo auto-édité, pensé comme un carnet de voyage visuel. Chaque numéro vous plonge dans un univers à travers mes images, mes récits et mon regard.</p>
         <div class="issues">
@@ -242,7 +250,7 @@
         <img src="assets/images/photo-wilfried.jpg" alt="Portrait de Wilfried Koba, photographe professionnel" loading="lazy">
       </div>
       <div class="about-text">
-        <span class="mono-label">05 — Qui suis-je</span>
+        <span class="mono-label">Qui suis-je</span>
         <h2>Wilfried Koba</h2>
         <p>Photographe et graphiste professionnel, je mets mon expérience au service des particuliers, des communes et des institutions. Depuis plus de 15 ans, je travaille dans la communication publique et institutionnelle : magazines municipaux, campagnes électorales, affiches, rapports d'activité, communication préfectorale...</p>
 

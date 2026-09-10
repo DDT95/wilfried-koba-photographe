@@ -2,9 +2,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ---- Portfolio manifests (édités à la main selon les fichiers présents dans assets/images/) ----
 const PORTFOLIO = {
-  'gal-mariage': { count: 27, prefix: 'assets/images/photo-', pad: 2, ext: 'jpg', alt: 'Reportage de mariage' },
+  'gal-mariage': { count: 26, prefix: 'assets/images/photo-', pad: 2, ext: 'jpg', alt: 'Reportage de mariage' },
   'gal-corporate': { count: 23, prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et corporate' },
-  'gal-evenement': { count: 39, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel' },
+  'gal-evenement': { count: 20, prefix: 'assets/images/evenement/event-', pad: 2, ext: 'jpg', alt: 'Reportage événementiel' },
 };
 
 function pad(n, width) {
