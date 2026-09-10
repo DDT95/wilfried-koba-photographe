@@ -4,24 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wilfried Koba — Photographe &amp; Graphiste</title>
-<meta name="description" content="Wilfried Koba, photographe et graphiste indépendant. Mariages, reportages institutionnels et corporate, événementiel, shootings et identité visuelle.">
+<meta name="description" content="Wilfried Koba, photographe et graphiste indépendant depuis plus de 15 ans. Mariages, portraits, reportages institutionnels et corporate, événementiel, graphisme et magazine Lens Cap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<div class="grain"></div>
 <div class="progress-bar" id="progressBar"></div>
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="#top" class="logo">Wilfried Koba</a>
     <nav class="main-nav" id="mainNav">
-      <a href="#services">Prestations</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#particuliers">Particuliers</a>
+      <a href="#corporate">Institutionnel</a>
+      <a href="#graphisme">Graphisme</a>
+      <a href="#magazine">Lens Cap</a>
+      <a href="#apropos">Qui suis-je</a>
+      <a href="#contact" class="nav-cta">Demander un devis</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -31,121 +34,283 @@
 
 <main id="top">
 
+  <!-- HERO — asymétrique, pas de bandeau centré -->
   <section class="hero">
-    <div class="hero-media">
-      <img src="assets/images/photo-08.jpg" alt="Photographie de mariage par Wilfried Koba" loading="eager">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="eyebrow">Photographe &amp; graphiste</p>
-      <h1>Des images qui racontent<br>vos moments et votre marque.</h1>
-      <p class="hero-lead">Mariages, reportages institutionnels, événementiel et identité visuelle — un regard sobre et soigné, pensé pour valoriser durablement votre image.</p>
+    <div class="hero-text">
+      <p class="mono-label">Photographe &amp; graphiste — depuis 2010</p>
+      <h1>Votre histoire<br>en lumière.</h1>
+      <p class="hero-lead">Mariages, portraits, institutions, entreprises : je capture vos moments et vos projets pour en faire des images qui durent.</p>
       <div class="hero-actions">
-        <a href="#portfolio" class="btn btn-primary">Voir le portfolio</a>
-        <a href="#contact" class="btn btn-ghost">Demander un devis</a>
+        <a href="#particuliers" class="btn btn-primary">Voir mes prestations</a>
+        <a href="#portfolio-mariage" class="btn btn-line">Le portfolio ↓</a>
       </div>
+      <ul class="hero-facts">
+        <li><strong>10+</strong> mariages / an</li>
+        <li><strong>200+</strong> concerts, événements &amp; festivals couverts</li>
+        <li><strong>15 ans</strong> en communication publique et institutionnelle</li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <img src="assets/images/photo-08.jpg" alt="Reportage de mariage par Wilfried Koba" loading="eager">
     </div>
   </section>
 
-  <section class="trust-strip">
-    <div class="container trust-inner">
-      <span>Mariages</span>
-      <span>Corporate &amp; institutionnel</span>
-      <span>Événementiel</span>
-      <span>Shooting</span>
-      <span>Graphisme</span>
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Mariages</span><span>·</span><span>Portraits</span><span>·</span><span>Baptêmes</span><span>·</span><span>Institutionnel</span><span>·</span><span>Corporate</span><span>·</span><span>Événementiel</span><span>·</span><span>Graphisme</span><span>·</span><span>Lens Cap</span><span>·</span>
+      <span>Mariages</span><span>·</span><span>Portraits</span><span>·</span><span>Baptêmes</span><span>·</span><span>Institutionnel</span><span>·</span><span>Corporate</span><span>·</span><span>Événementiel</span><span>·</span><span>Graphisme</span><span>·</span><span>Lens Cap</span><span>·</span>
     </div>
-  </section>
+  </div>
 
-  <section id="services" class="services">
+  <!-- PARTICULIERS -->
+  <section id="particuliers" class="block">
     <div class="container">
-      <p class="eyebrow center">Prestations</p>
-      <h2 class="section-title center">Un accompagnement complet, de la prise de vue à l'identité visuelle</h2>
+      <div class="block-head">
+        <span class="mono-label">01 — Particuliers</span>
+        <h2>Des souvenirs qui traversent le temps</h2>
+        <p class="block-lead">Mariage, anniversaire, baptême, shooting portrait ou famille : chaque moment important mérite d'être immortalisé avec soin. Je capture vos émotions pour en faire des souvenirs intemporels.</p>
+      </div>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <span class="service-index">01</span>
-          <h3>Mariages</h3>
-          <p>Reportage complet de votre journée, des préparatifs à la soirée : des images naturelles, sans mise en scène forcée, qui vous ressemblent.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-index">02</span>
-          <h3>Reportages institutionnels &amp; corporate</h3>
-          <p>Portraits d'équipe, sites industriels, inaugurations, vie d'entreprise : des visuels professionnels pour vos supports de communication.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-index">03</span>
-          <h3>Événementiel</h3>
-          <p>Séminaires, conférences, lancements de produits, soirées privées : une couverture discrète et réactive de vos temps forts.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-index">04</span>
-          <h3>Shooting</h3>
-          <p>Portraits, book, univers de marque : des séances photo sur-mesure adaptées à votre projet et à votre image.</p>
-        </article>
-        <article class="service-card">
-          <span class="service-index">05</span>
-          <h3>Graphisme &amp; identité visuelle</h3>
-          <p>Mise en valeur de vos visuels : supports de communication, retouche et direction artistique cohérente avec votre marque.</p>
-        </article>
-        <article class="service-card service-card--cta">
-          <h3>Un projet en tête ?</h3>
-          <p>Parlons-en et construisons ensemble la prestation la plus adaptée à vos besoins.</p>
-          <a href="#contact" class="btn btn-primary btn-small">Me contacter</a>
-        </article>
+      <div class="includes">
+        <span>Reportage sur-mesure</span>
+        <span>Retouche professionnelle</span>
+        <span>Galerie privée en ligne</span>
+        <span>Tirages &amp; album en option</span>
+      </div>
+
+      <div class="rate-list">
+        <div class="rate-row">
+          <span class="rate-name">Shooting portrait / famille</span>
+          <span class="rate-detail">1h · 15 photos retouchées</span>
+          <span class="rate-price">180 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Anniversaire / baptême</span>
+          <span class="rate-detail">2-3h · 40 photos retouchées</span>
+          <span class="rate-price">350 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Mariage light</span>
+          <span class="rate-detail">Mairie + photos de groupe · 75 photos retouchées</span>
+          <span class="rate-price">350 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Mariage</span>
+          <span class="rate-detail">Cérémonie + vin d'honneur · 250 photos retouchées</span>
+          <span class="rate-price">850 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Mariage Premium</span>
+          <span class="rate-detail">Journée complète jusqu'au gâteau · 500 photos</span>
+          <span class="rate-price">à partir de 1 200 €</span>
+        </div>
+      </div>
+      <p class="rate-note">Tarifs indicatifs — chaque projet est différent, contactez-moi pour un devis adapté à vos attentes et à votre budget. <a href="#contact">Réservez votre date →</a></p>
+
+      <div class="gallery-tabs" id="galleryPersonal">
+        <div class="gallery gallery-active" id="gal-mariage" data-portfolio-group></div>
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="portfolio">
+  <!-- INSTITUTIONNEL / CORPORATE -->
+  <section id="corporate" class="block block-alt">
     <div class="container">
-      <p class="eyebrow center">Portfolio</p>
-      <h2 class="section-title center">Une sélection de réalisations</h2>
-      <p class="section-lead center">Un aperçu de mon travail en photographie de mariage — le reste de mon univers (corporate, événementiel, graphisme) est visible sur demande.</p>
+      <div class="block-head">
+        <span class="mono-label">02 — Institutions &amp; entreprises</span>
+        <h2>Un regard professionnel pour vos événements</h2>
+        <p class="block-lead">Vous êtes une commune, une institution, une entreprise ? Je valorise vos événements, vos équipes et vos projets à travers des images prêtes à l'emploi pour votre communication.</p>
+      </div>
 
-      <div class="gallery" id="gallery">
-        <button class="gallery-item" data-full="assets/images/photo-01.jpg"><img src="assets/images/photo-01.jpg" alt="Reportage de mariage — couple" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-02.jpg"><img src="assets/images/photo-02.jpg" alt="Reportage de mariage — instant complice" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-03.jpg"><img src="assets/images/photo-03.jpg" alt="Reportage de mariage — cérémonie religieuse" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-04.jpg"><img src="assets/images/photo-04.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-05.jpg"><img src="assets/images/photo-05.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-06.jpg"><img src="assets/images/photo-06.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-07.jpg"><img src="assets/images/photo-07.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-08.jpg"><img src="assets/images/photo-08.jpg" alt="Reportage de mariage — couple souriant" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-09.jpg"><img src="assets/images/photo-09.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-10.jpg"><img src="assets/images/photo-10.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-11.jpg"><img src="assets/images/photo-11.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-12.jpg"><img src="assets/images/photo-12.jpg" alt="Reportage de mariage" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/images/photo-13.jpg"><img src="assets/images/photo-13.jpg" alt="Reportage de mariage" loading="lazy"></button>
+      <div class="includes">
+        <span>Reportage événementiel</span>
+        <span>Portraits institutionnels</span>
+        <span>Livraison rapide, web &amp; print</span>
+        <span>Respect de vos délais</span>
+      </div>
+
+      <div class="rate-list">
+        <div class="rate-row">
+          <span class="rate-name">Portrait institutionnel</span>
+          <span class="rate-detail">Séance individuelle · 3 photos retouchées</span>
+          <span class="rate-price">120 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Reportage institutionnel</span>
+          <span class="rate-detail">2h · 40 photos retouchées</span>
+          <span class="rate-price">360 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Événement journée complète</span>
+          <span class="rate-detail">200 photos retouchées</span>
+          <span class="rate-price">1 200 €</span>
+        </div>
+      </div>
+      <p class="rate-note">Devis sur demande pour les collectivités et entreprises. <a href="#contact">Contactez-moi →</a></p>
+
+      <div class="gallery-tabs" id="galleryPro">
+        <div class="gallery-tab-nav">
+          <button class="tab-btn active" data-target="gal-corporate">Corporate &amp; institutionnel</button>
+          <button class="tab-btn" data-target="gal-evenement">Événementiel</button>
+        </div>
+        <div class="gallery gallery-active" id="gal-corporate" data-portfolio-group></div>
+        <div class="gallery" id="gal-evenement" data-portfolio-group hidden></div>
+      </div>
+
+      <p class="client-note">Ils m'ont fait confiance : Mairies de Magny-en-Vexin et Villiers-le-Bel, Cabinet du Préfet du Val-d'Oise, services de l'État — et côté scène, plus de 200 concerts, événements et festivals couverts, pour des artistes comme La Fouine, Alain Chamfort, Nina Thuram ou Dany Boon.</p>
+    </div>
+  </section>
+
+  <!-- GRAPHISME -->
+  <section id="graphisme" class="block">
+    <div class="container">
+      <div class="block-head">
+        <span class="mono-label">03 — Graphisme</span>
+        <h2>Des visuels impactants au service de vos messages</h2>
+        <p class="block-lead">Plus de 15 ans d'expérience en communication publique et institutionnelle : magazines municipaux, campagnes électorales, affiches, rapports d'activité. J'ai notamment conçu la communication et les affiches de la ville de Magny-en-Vexin en tant que chargé de communication, et réalisé le rapport d'activité de la Préfecture du Val-d'Oise.</p>
+      </div>
+
+      <div class="includes">
+        <span>Magazines &amp; publications locales</span>
+        <span>Affiches, flyers, flash infos</span>
+        <span>Campagnes électorales</span>
+        <span>Identité visuelle &amp; charte graphique</span>
+      </div>
+
+      <div class="rate-list">
+        <div class="rate-row">
+          <span class="rate-name">Flyer ou affiche A3</span>
+          <span class="rate-detail">Création + mise en page</span>
+          <span class="rate-price">180 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Mise en page 8 pages</span>
+          <span class="rate-detail">Magazine municipal, brochure</span>
+          <span class="rate-price">500 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Rapport institutionnel complet</span>
+          <span class="rate-detail">40 pages</span>
+          <span class="rate-price">800 €</span>
+        </div>
+        <div class="rate-row">
+          <span class="rate-name">Pack campagne électorale</span>
+          <span class="rate-detail">Affiche + 4 tracts + programme + charte</span>
+          <span class="rate-price">1 800 €</span>
+        </div>
+      </div>
+      <p class="rate-note">Contactez-moi pour un projet sur-mesure. <a href="#contact">Discutons-en →</a></p>
+    </div>
+  </section>
+
+  <!-- MAGAZINE LENS CAP -->
+  <section id="magazine" class="magazine">
+    <div class="container magazine-inner">
+      <div class="magazine-text">
+        <span class="mono-label">04 — Auto-édition</span>
+        <h2>Lens Cap</h2>
+        <p>Mon magazine photo auto-édité, pensé comme un carnet de voyage visuel. Chaque numéro vous plonge dans un univers à travers mes images, mes récits et mon regard.</p>
+        <div class="issues">
+          <div class="issue">
+            <span class="issue-no">N°1</span>
+            <span class="issue-name">New York City</span>
+            <span class="issue-desc">La ville-monde, entre rues vibrantes et instants suspendus.</span>
+          </div>
+          <div class="issue">
+            <span class="issue-no">N°2</span>
+            <span class="issue-name">L'Écosse</span>
+            <span class="issue-desc">D'Édimbourg à l'île de Skye.</span>
+          </div>
+        </div>
+        <p class="magazine-cta">Pour commander un numéro, contactez-moi directement.</p>
+
+        <div class="prints">
+          <h3>Tirages photographiques</h3>
+          <p>Certaines de mes photographies sont disponibles en tirages, imprimés sur papier d'art de haute qualité et livrés avec certificat d'authenticité.</p>
+        </div>
+
+        <a href="#contact" class="btn btn-outline">Commander un numéro ou un tirage</a>
       </div>
     </div>
   </section>
 
+  <!-- QUI SUIS-JE -->
   <section id="apropos" class="about">
     <div class="container about-inner">
       <div class="about-media">
         <img src="assets/images/photo-03.jpg" alt="Cérémonie de mariage photographiée par Wilfried Koba" loading="lazy">
       </div>
       <div class="about-text">
-        <p class="eyebrow">À propos</p>
-        <h2 class="section-title">Wilfried Koba</h2>
-        <p>Photographe et graphiste, j'accompagne particuliers et entreprises dans la valorisation de leurs moments et de leur image : mariages, reportages institutionnels et corporate, événementiel, shootings et création graphique.</p>
-        <p>Mon approche reste la même quel que soit le projet : une écoute attentive de vos besoins, une prise de vue discrète et soignée, et une livraison de qualité pensée pour un usage professionnel comme personnel.</p>
+        <span class="mono-label">05 — Qui suis-je</span>
+        <h2>Wilfried Koba</h2>
+        <p>Photographe et graphiste professionnel, je mets mon expérience au service des particuliers, des communes et des institutions. Depuis plus de 15 ans, je travaille dans la communication publique et institutionnelle : magazines municipaux, campagnes électorales, affiches, rapports d'activité, communication préfectorale...</p>
+
+        <p><strong>En tant que photographe</strong>, j'accompagne :</p>
+        <ul class="about-list">
+          <li>des particuliers pour leurs mariages, anniversaires, portraits et événements familiaux ;</li>
+          <li>des collectivités (Mairies de Magny-en-Vexin, Villiers-le-Bel…) pour leurs reportages officiels, portraits institutionnels et événements culturels ;</li>
+          <li>des institutions (Cabinet du Préfet du Val-d'Oise, services de l'État, établissements publics) pour leurs reportages, portraits et documents de communication.</li>
+        </ul>
+
+        <p><strong>En tant que graphiste</strong>, j'ai conçu et mis en page :</p>
+        <ul class="about-list">
+          <li>des magazines municipaux et publications locales ;</li>
+          <li>des campagnes électorales complètes (affiches, programmes, flyers) ;</li>
+          <li>des plaquettes institutionnelles et rapports d'activité ;</li>
+          <li>des supports variés, du print aux outils digitaux.</li>
+        </ul>
+
+        <p>Mon approche est simple : allier rigueur professionnelle et regard créatif pour raconter vos histoires, mettre en lumière vos projets et créer des visuels qui marquent.</p>
         <a href="#contact" class="btn btn-outline">Discutons de votre projet</a>
       </div>
     </div>
   </section>
 
+  <!-- AVIS CLIENTS -->
+  <section id="avis" class="testimonials">
+    <div class="container">
+      <span class="mono-label center">Avis clients</span>
+      <div class="quote-stack" id="quoteStack">
+        <blockquote class="quote">
+          <p>« Un grand merci pour les photos qui sont vraiment à l'image de ce que j'avais imaginé, elles sont magnifiques ! Vous avez su saisir chaque instant et le résultat est parfait. Tout le monde vous a trouvé très sympathique et je saurai recommander vos services. »</p>
+          <cite>Angélique — Mariage</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>« Plus qu'une journée de shooting, c'est un vrai moment de vie que nous avons partagé avec Wilfried. Il a su nous mettre à l'aise et le résultat dépasse nos espérances : les photos sont fidèles à la réalité et il a parfaitement su cerner nos attentes. Wilfried est un photographe "pépite", vous pouvez aller le voir les yeux fermés ! »</p>
+          <cite>Emma, Rémi, Hortense &amp; Hector — Séance famille</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>« Wil, je suis plus que ravi de t'avoir confié cette tâche, c'est exactement ce que je souhaitais : des instants de vie qui vont rester gravés dans nos cœurs. Merci beaucoup pour ce travail magnifique. »</p>
+          <cite>Avis client — Mariage</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>« Je viens de voir les photos et elles sont superbes ! Merci beaucoup, de la part de tous, pour nous avoir permis de garder un souvenir de ce moment unique pour notre famille. »</p>
+          <cite>Avis client — Anniversaire enfant</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container contact-inner">
-      <p class="eyebrow center">Contact</p>
-      <h2 class="section-title center">Parlons de votre projet</h2>
-      <p class="section-lead center">Mariage, reportage d'entreprise, événement ou création graphique : décrivez-moi votre besoin, je reviens vers vous rapidement.</p>
+      <span class="mono-label center">Contact</span>
+      <h2 class="center">Votre projet mérite d'être bien raconté</h2>
+      <p class="block-lead center">Mariage, portrait, reportage d'entreprise, événement, graphisme ou commande de magazine : décrivez-moi votre besoin, je vous réponds sous 24h avec un devis adapté à votre budget.</p>
 
       <div class="contact-grid">
         <a class="contact-card" href="mailto:koba.wilfried@gmail.com">
           <span class="contact-label">Email</span>
           <span class="contact-value">koba.wilfried@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener">
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value">@wilfried_koba</span>
+        </a>
+        <a class="contact-card" href="https://www.flickr.com/photos/201997375@N02/albums/" target="_blank" rel="noopener">
+          <span class="contact-label">Flickr</span>
+          <span class="contact-value">Portfolio complet</span>
         </a>
         <div class="contact-card">
           <span class="contact-label">Zone d'intervention</span>
@@ -159,8 +324,12 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <span>© <span id="year"></span> Wilfried Koba — Photographe &amp; graphiste. Tous droits réservés.</span>
-    <a href="#top">Haut de page ↑</a>
+    <span>© <span id="year"></span> Wilfried Koba — Photographe &amp; graphiste.</span>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.flickr.com/photos/201997375@N02/albums/" target="_blank" rel="noopener">Flickr</a>
+      <a href="#top">Haut de page ↑</a>
+    </div>
   </div>
 </footer>
 
