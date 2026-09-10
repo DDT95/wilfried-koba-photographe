@@ -2,7 +2,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ---- Portfolio manifests (édités à la main selon les fichiers présents dans assets/images/) ----
 const PORTFOLIO = {
-  'gal-mariage':   { count: 30, featuredFrom: 27, prefix: 'assets/images/photo-',           pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple' },
+  'gal-mariage': {
+    count: 61,
+    sequence: [61, 3, 49, 16, 52, 24, 45, 14, 31, 47, 5, 57, 38, 22, 44, 35, 8, 50, 9, 34, 4, 58, 26, 40, 17, 59, 11, 48, 37, 7, 60, 18, 42, 54, 13, 51, 46, 21, 41, 55, 12, 43, 33, 23, 15, 19, 25, 27, 29, 32, 10, 6],
+    prefix: 'assets/images/photo-', pad: 2, ext: 'jpg', alt: 'Reportage de mariage et portrait de couple'
+  },
   'gal-famille':   { count: 18, prefix: 'assets/images/famille/family-', pad: 2, ext: 'jpg', alt: 'Portrait, baptême et reportage de famille' },
   'gal-corporate': { count: 82, featuredFrom: 44, exclude: [10, 13, 14, 16], prefix: 'assets/images/corporate/corp-', pad: 2, ext: 'jpg', alt: 'Reportage institutionnel et mission de terrain' },
   'gal-evenement': {
@@ -77,6 +81,28 @@ function buildGalleries() {
   });
 }
 buildGalleries();
+
+// ---- Contact : ouvre un e-mail prérempli, sans collecte externe ----
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const request = data.get('demande') || 'Demande de contact';
+    const project = data.get('projet') || 'Non précisé';
+    const subject = `${request} — Wilfried Koba`;
+    const body = [
+      `Nom : ${data.get('nom') || ''}`,
+      `E-mail : ${data.get('email') || ''}`,
+      `Téléphone : ${data.get('telephone') || 'Non renseigné'}`,
+      `Demande : ${request}`,
+      `Domaine : ${project}`,
+      '',
+      data.get('message') || ''
+    ].join('\n');
+    window.location.href = `mailto:koba.wilfried@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
 
 // ---- Header scroll ----
 const header = document.getElementById('siteHeader');

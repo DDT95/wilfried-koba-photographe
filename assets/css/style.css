@@ -100,7 +100,21 @@ blockquote p{font-family:var(--sans)}
 .testimonials-grid blockquote cite span{color:var(--muted);opacity:1}
 .contact-section{background:var(--signal)}
 .contact-section h2{font-size:clamp(4rem,9vw,9rem)}
+.contact-main{grid-template-columns:minmax(280px,.75fr) minmax(420px,1.25fr);align-items:start;gap:clamp(2rem,5vw,5rem)}
 .contact-email{font-family:var(--sans);font-weight:650}
+.contact-copy h2{margin-bottom:2rem}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1.5rem;padding:clamp(1.4rem,3vw,2.4rem);background:var(--paper);color:var(--ink)}
+.contact-field{display:flex;flex-direction:column;gap:.45rem}
+.contact-field-wide,.contact-submit{grid-column:1 / -1}
+.contact-field label{font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.contact-field label span{color:var(--muted);font-weight:400;letter-spacing:0;text-transform:none}
+.contact-field input,.contact-field select,.contact-field textarea{width:100%;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:.7rem .1rem;background:transparent;color:var(--ink);font:inherit;font-size:.86rem;outline:none}
+.contact-field textarea{min-height:130px;resize:vertical}
+.contact-field input:focus,.contact-field select:focus,.contact-field textarea:focus{border-bottom-color:var(--signal);box-shadow:0 1px 0 var(--signal)}
+.contact-submit{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:.25rem}
+.contact-submit p{max-width:250px;color:var(--muted);font-size:.65rem;line-height:1.4}
+.contact-button{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:48px;padding:.8rem 1.25rem;border:1px solid var(--ink);background:var(--ink);color:var(--white);font:inherit;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.contact-button:hover{background:var(--signal);border-color:var(--signal)}
 .footer-inner strong{font-family:var(--sans);font-weight:750;text-transform:uppercase}
 .tarifs-hero h1,.tarifs-section-head h2,.pack-name,.pack-price,.pack-subhead,.graphic-intro h3,.institution-intro h3,.institution-offer strong,.institution-contact strong,.tarifs-cta-band h2{font-family:var(--serif)!important}
 .tarifs-hero h1{font-weight:700!important;text-transform:none!important}
@@ -142,6 +156,11 @@ blockquote p{font-family:var(--sans)}
   .family-packs{grid-template-columns:1fr!important}
   .section-heading h2,.about-copy h2,.lenscap-section h2{font-size:clamp(3rem,15vw,5.4rem)}
   .contact-section h2{font-size:clamp(3.5rem,18vw,6rem)}
+  .contact-main{grid-template-columns:1fr;gap:2.5rem}
+  .contact-form{grid-template-columns:1fr}
+  .contact-field-wide,.contact-submit{grid-column:auto}
+  .contact-submit{align-items:flex-start;flex-direction:column}
+  .contact-button{width:100%}
   .port-tabs{position:static;overflow:visible}
   .port-tabs{grid-template-columns:1fr 1fr}
   .ptab{min-width:0}

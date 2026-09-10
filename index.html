@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,300..900&family=Newsreader:opsz,wght@6..72,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260910-2">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260910-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -39,7 +39,7 @@
     <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
       <div class="section-heading"><div><p class="kicker">Travaux choisis</p><h2 id="portfolio-title">Portfolio</h2></div><p>Des instants vécus, des gestes, des regards. Cliquez sur une image pour l'agrandir.</p></div>
       <div class="port-tabs" role="tablist" aria-label="Catégories du portfolio">
-        <button class="ptab active" id="tab-mariage" data-target="gal-mariage" role="tab" aria-controls="gal-mariage" aria-selected="true" tabindex="0">Mariages <span>30</span></button>
+        <button class="ptab active" id="tab-mariage" data-target="gal-mariage" role="tab" aria-controls="gal-mariage" aria-selected="true" tabindex="0">Mariages <span>52</span></button>
         <button class="ptab" id="tab-famille" data-target="gal-famille" role="tab" aria-controls="gal-famille" aria-selected="false" tabindex="-1">Famille <span>18</span></button>
         <button class="ptab" id="tab-corporate" data-target="gal-corporate" role="tab" aria-controls="gal-corporate" aria-selected="false" tabindex="-1">Institutions <span>78</span></button>
         <button class="ptab" id="tab-evenement" data-target="gal-evenement" role="tab" aria-controls="gal-evenement" aria-selected="false" tabindex="-1">Événements <span>93</span></button>
@@ -80,7 +80,7 @@
 
     <section class="about-section" id="apropos" aria-labelledby="about-title">
       <figure class="about-photo"><img src="assets/images/wilfried-en-action.jpg" alt="Wilfried Koba au travail pendant un concert" loading="lazy"></figure>
-      <div class="about-copy"><p class="kicker">Derrière l'objectif</p><h2 id="about-title">À propos</h2><p class="about-lead">Je suis Wilfried Koba, photographe et graphiste professionnel depuis plus de quinze ans.</p><p>Depuis 2010, j'ai couvert plus de 200 concerts et travaillé sur des événements privés comme sur des missions institutionnelles de terrain. Ce parcours m'a appris à observer vite, à rester discret et à livrer des images qui servent vraiment leur sujet.</p><p class="about-references"><strong>Quelques références</strong> Ministère de l'Intérieur, Présidence de la République, Cabinet du Préfet du Val-d'Oise, mairies de Magny-en-Vexin et Villiers-le-Bel.</p><dl class="about-facts"><div><dt>Basé à</dt><dd>Magny-en-Vexin</dd></div><div><dt>Zone</dt><dd>Eure (27) · Oise (60) · Île-de-France · déplacements</dd></div><div><dt>Depuis</dt><dd>2010</dd></div></dl></div>
+      <div class="about-copy"><p class="kicker">Derrière l'objectif</p><h2 id="about-title">À propos</h2><p class="about-lead">Je suis Wilfried Koba, photographe et graphiste professionnel depuis plus de quinze ans.</p><p>Depuis 2010, j'ai couvert plus de 200 concerts et travaillé sur des événements privés comme sur des missions institutionnelles de terrain. Ce parcours m'a appris à observer vite, à rester discret et à livrer des images qui servent vraiment leur sujet.</p><p class="about-references"><strong>Quelques références</strong> Ministère de l'Intérieur, Présidence de la République, Cabinet du Préfet du Val-d'Oise, villes de Magny-en-Vexin, Villiers-le-Bel, Arnouville, Cergy et Garges-lès-Gonesse.</p><dl class="about-facts"><div><dt>Basé à</dt><dd>Magny-en-Vexin, Île-de-France</dd></div><div><dt>Zone</dt><dd>Toute l'Île-de-France · Eure (27) · Oise (60)</dd></div><div><dt>Depuis</dt><dd>2010</dd></div></dl></div>
     </section>
 
     <section class="lenscap-section" aria-labelledby="lenscap-title">
@@ -101,11 +101,31 @@
       </div>
     </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><p class="kicker">Un projet en tête ?</p><div class="contact-main"><h2 id="contact-title">Contact</h2><div class="contact-copy"><p>Mariage, portrait, reportage, événement ou graphisme : décrivez-moi votre besoin.</p><a class="contact-email" href="mailto:koba.wilfried@gmail.com">koba.wilfried@gmail.com <span aria-hidden="true">↗</span></a></div></div><div class="contact-meta"><a href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener">Instagram · @wilfried_koba</a><a href="tarifs.html">Consulter les tarifs</a><span>27 · 60 · Île-de-France · déplacements</span></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="kicker">Un projet en tête ?</p>
+      <div class="contact-main">
+        <div class="contact-copy">
+          <h2 id="contact-title">Contact</h2>
+          <p>Mariage, portrait, reportage, événement, tirage ou graphisme : décrivez-moi votre besoin.</p>
+          <p>Basé en Île-de-France, je me déplace dans toute la région ainsi que dans l'Eure (27) et l'Oise (60).</p>
+          <a class="contact-email" href="mailto:koba.wilfried@gmail.com">koba.wilfried@gmail.com <span aria-hidden="true">↗</span></a>
+        </div>
+        <form class="contact-form" id="contactForm" action="mailto:koba.wilfried@gmail.com" method="post" enctype="text/plain">
+          <div class="contact-field"><label for="contactName">Nom</label><input id="contactName" name="nom" type="text" autocomplete="name" required></div>
+          <div class="contact-field"><label for="contactEmail">E-mail</label><input id="contactEmail" name="email" type="email" autocomplete="email" required></div>
+          <div class="contact-field"><label for="contactPhone">Téléphone <span>facultatif</span></label><input id="contactPhone" name="telephone" type="tel" autocomplete="tel"></div>
+          <div class="contact-field"><label for="contactRequest">Votre demande</label><select id="contactRequest" name="demande" required><option value="">Choisir</option><option>Demande de devis</option><option>Demande de renseignement</option><option>Achat d'un magazine Lens Cap</option><option>Commande de tirages photo</option><option>Autre demande</option></select></div>
+          <div class="contact-field contact-field-wide"><label for="contactProject">Domaine concerné <span>facultatif</span></label><select id="contactProject" name="projet"><option value="">Non précisé</option><option>Mariage</option><option>Famille ou portrait</option><option>Événement</option><option>Institution ou entreprise</option><option>Graphisme</option></select></div>
+          <div class="contact-field contact-field-wide"><label for="contactMessage">Votre message</label><textarea id="contactMessage" name="message" rows="6" required></textarea></div>
+          <div class="contact-submit"><button class="contact-button" type="submit">Préparer mon message <span aria-hidden="true">↗</span></button><p id="contactNote">Votre messagerie s'ouvrira avec votre demande préremplie.</p></div>
+        </form>
+      </div>
+      <div class="contact-meta"><a href="https://www.instagram.com/wilfried_koba" target="_blank" rel="noopener">Instagram · @wilfried_koba</a><a href="tarifs.html">Consulter les tarifs</a><span>Toute l'Île-de-France · Eure (27) · Oise (60)</span></div>
+    </section>
   </main>
 
   <footer><div class="footer-inner"><div><strong>Wilfried Koba</strong><span>Photographe &amp; graphiste</span></div><p>© <span id="year"></span> Wilfried Koba<br>SIREN 979 082 930</p><a href="#top">Retour en haut ↑</a></div></footer>
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photographie agrandie" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Fermer">Fermer ×</button><button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Photo précédente">←</button><img src="" alt="" id="lightboxImg"><button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Photo suivante">→</button></div>
-  <script src="assets/js/script.js?v=20260910-2"></script>
+  <script src="assets/js/script.js?v=20260910-3"></script>
 </body>
 </html>
